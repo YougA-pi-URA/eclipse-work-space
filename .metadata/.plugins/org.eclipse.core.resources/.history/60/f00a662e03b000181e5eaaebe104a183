@@ -1,0 +1,41 @@
+package com.internousdev.ecsitea.action;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsitea.dao.MCategoryDAO;
+import com.internousdev.ecsitea.dto.MCategoryDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HomeAction extends ActionSupport implements SessionAware {
+	
+	private List<MCategoryDTO> mCategoryDTOList = new ArrayList<MCategoryDTO>();
+	private String categoryId;
+	private Map<String, Object> session;
+	
+	public String execcute(){
+		return SUCCESS;
+	}
+
+	/**
+	 * sessionを取得します。
+	 * @return session
+	 */
+	public Map<String,Object> getSession() {
+	    return session;
+	}
+
+	/**
+	 * arg0を設定します。
+	 * @param arg0 arg0
+	 */
+	@Override
+	public void setSession(Map<String, Object> arg0) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+
+}
