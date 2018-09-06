@@ -41,7 +41,7 @@ public class HomeAction extends ActionSupport implements SessionAware {
 	 * mCategoryDTOListを取得します。
 	 * @return mCategoryDTOList
 	 */
-	public List<MCategoryDTO> getMCategoryDTOList() {
+	public List<MCategoryDTO> getmCategoryDTOList() {
 	    return mCategoryDTOList;
 	}
 
@@ -49,7 +49,7 @@ public class HomeAction extends ActionSupport implements SessionAware {
 	 * mCategoryDTOListを設定します。
 	 * @param mCategoryDTOList mCategoryDTOList
 	 */
-	public void setMCategoryDTOList(List<MCategoryDTO> mCategoryDTOList) {
+	public void setmCategoryDTOList(List<MCategoryDTO> mCategoryDTOList) {
 	    this.mCategoryDTOList = mCategoryDTOList;
 	}
 
