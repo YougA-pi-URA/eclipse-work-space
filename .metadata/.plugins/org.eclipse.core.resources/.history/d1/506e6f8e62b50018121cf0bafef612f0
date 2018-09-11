@@ -1,0 +1,12 @@
+package windowapp;
+
+import windowapp.WindowTest;
+
+public class MainAction {
+
+	public static void main(String args[]){
+		WindowTest test = new WindowTest();
+		test.getClass();
+	}
+
+}

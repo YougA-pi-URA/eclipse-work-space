@@ -1,0 +1,78 @@
+package windowapp;
+
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+public class WindowTest extends Frame implements WindowListener {
+
+	Label label;
+	Button btn;
+	TextField text;
+
+	WindowTest(){
+
+		addWindowListener(this);
+		setSize(400,300);
+		setLayout(new GridLayout(3,1));
+
+		label = new Label("I am Label.");
+		add(label);
+		btn = new Button("I am Button.");
+		add(btn);
+		text = new TextField("I am TextField.");
+		add(text);
+
+		setVisible(true);
+		System.out.println(text.getText());
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("Opened");
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("Closing");
+		System.exit(0);
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("Closed");
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("Iconified");
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("Deiconified");
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("Activated");
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("Deactivated");
+	}
+
+}

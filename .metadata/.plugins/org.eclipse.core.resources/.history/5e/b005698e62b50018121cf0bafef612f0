@@ -1,0 +1,7 @@
+package windowapp;
+
+import java.awt.*;
+
+public class MainAction {
+
+}

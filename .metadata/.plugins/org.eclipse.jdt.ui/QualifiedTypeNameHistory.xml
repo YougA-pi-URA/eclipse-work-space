@@ -23,4 +23,8 @@
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsitea.dto.test.CartInfoDTOTest"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsitea.dto.CartInfoDTO"/>
+<fullyQualifiedTypeName name="windowapp.WindowTest"/>
+<fullyQualifiedTypeName name="java.awt.FlowLayout"/>
+<fullyQualifiedTypeName name="java.awt.event.WindowListener"/>
+<fullyQualifiedTypeName name="java.awt.GridBagConstraints"/>
 </qualifiedTypeNameHistroy>

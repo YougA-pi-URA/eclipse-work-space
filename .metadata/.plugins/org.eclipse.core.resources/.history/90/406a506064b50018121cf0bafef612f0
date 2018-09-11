@@ -1,0 +1,17 @@
+package windowapp;
+
+import java.awt.Frame;
+import java.awt.Label;
+
+public class WindowTest {
+
+	WindowTest(){
+		Frame frm = new Frame("Window test");
+		frm.setSize(240,240);
+		frm.setVisible(true);
+
+		Label label = new Label("Hello Window");
+		frm.add(label);
+	}
+
+}
