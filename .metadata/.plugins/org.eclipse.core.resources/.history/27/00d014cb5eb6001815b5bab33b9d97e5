@@ -1,0 +1,35 @@
+package mycalculator;
+
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Label;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Display extends JFrame {
+
+	Display(){
+		GridBagLayout gb = new GridBagLayout();
+		GridBagConstraints c = new GridBagConstraints();
+
+		Label label = new Label("window");
+		c.fill = GridBagConstraints.BOTH;
+		c.gridx = 0;
+		c.gridy = 0;
+		c.gridheight = 1;
+		gb.setConstraints(label, c);
+		add(label);
+
+		for(int i = 0; i < 16; i++){
+			c.gridx = i % 4;
+			c.gridy = (i/4) + 1;
+			JButton jbtn = new JButton("O");
+			gb.setConstraints(jbtn, c);
+			add(jbtn);
+		}
+
+		setVisible(true);
+	}
+
+}

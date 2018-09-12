@@ -1,0 +1,12 @@
+package mycalculator;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Display extends JFrame {
+
+	//画面表示のメソッド
+
+}

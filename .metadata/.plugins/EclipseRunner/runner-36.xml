@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<runner version="1.0.0">
+<category name="カテゴリーなし">
+<launchConfiguration bookmark="false" name="CartInfoDTOTest"/>
+<launchConfiguration bookmark="false" name="CartInfoDTOTest (1)"/>
+<launchConfiguration bookmark="false" name="FileOut"/>
+<launchConfiguration bookmark="false" name="MainAction"/>
+<launchConfiguration bookmark="false" name="Play"/>
+<launchConfiguration bookmark="false" name="sample-web"/>
+<launchConfiguration bookmark="false" name="ローカル・ホスト の Tomcat8 (Java8)"/>
+</category>
+</runner>

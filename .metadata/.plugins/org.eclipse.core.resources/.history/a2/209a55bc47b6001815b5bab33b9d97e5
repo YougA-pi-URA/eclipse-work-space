@@ -1,0 +1,23 @@
+package mycalculator;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class FrameSet extends JFrame {
+
+	public void mainFrame(){
+		EventQueue.invokeLater(new Runnable() {
+
+			@Override
+			public void run() {
+
+				JFrame frame = new JFrame();
+				frame.setSize(300, 200);
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frame.setVisible(true);
+
+			}
+		});
+	}
+
+}

@@ -58,9 +58,9 @@ public class WindowTest extends Frame implements ActionListener, ItemListener, W
 			gridbag.setConstraints(btns[i], c);
 			add(btns[i]);
 		}
-		
+
 		toRad = 1.0;
-		
+
 		list = new List();
 		list.add("√");
 		list.add("sin");
@@ -72,7 +72,7 @@ public class WindowTest extends Frame implements ActionListener, ItemListener, W
 		c.gridwidth = 3;
 		gridbag.setConstraints(list, c);
 		add(list);
-		
+
 		check = new Checkbox("Degree");
 		check.setState(false);
 		check.addItemListener(this);
@@ -143,7 +143,7 @@ public class WindowTest extends Frame implements ActionListener, ItemListener, W
 			}catch(Exception err){
 				regB = "Error";
 			}
-			
+
 		}
 		if(scr == check){
 			if(check.getState())

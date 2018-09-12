@@ -1,0 +1,10 @@
+package mycalculator;
+
+import javax.swing.JFrame;
+
+public class FrameSet extends JFrame {
+
+	FrameSet frame = new FrameSet();
+
+
+}

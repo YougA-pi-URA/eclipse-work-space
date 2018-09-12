@@ -1,0 +1,33 @@
+package mycalculator;
+
+import java.awt.EventQueue;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+
+public class FrameSet extends JFrame {
+
+	FrameSet(){
+		EventQueue.invokeLater(new Runnable() {
+
+			@Override
+			public void run() {
+
+				JFrame frame = new JFrame();
+				frame.setLocationByPlatform(true);
+				frame.setSize(300, 200);
+				frame.setTitle("test title is");
+				Toolkit tk = Toolkit.getDefaultToolkit();
+				Image img = tk.getImage("icon1.gif");
+				frame.setIconImage(img);
+
+
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frame.setVisible(true);
+
+			}
+		});
+	}
+
+}
