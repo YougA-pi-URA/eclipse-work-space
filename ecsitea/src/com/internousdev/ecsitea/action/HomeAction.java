@@ -17,21 +17,20 @@ public class HomeAction extends ActionSupport implements SessionAware {
 	private String categoryId;
 	private Map<String, Object> session;
 
-	public String execcute(){
+	public String execute(){
 
 		if(!(session.containsKey("loginId"))&&!(session.containsKey("tempUserId"))){
 			CommonUtility commonUtility = new CommonUtility();
 			session.put("tempUserId", commonUtility.getRandomValue());
 		}
 
-		if(!session.containsKey("logined"))
+		if(!(session.containsKey("logined")))
 			session.put("logined", 0);
 
-		if(!session.containsKey("mCategoryList")){
+		if(!(session.containsKey("mCategoryList"))){
 			MCategoryDAO mCategoryDAO = new MCategoryDAO();
 			mCategoryDTOList = mCategoryDAO.getMCategoryList();
 			session.put("mCategoryDTOList", mCategoryDTOList);
-
 		}
 
 		return SUCCESS;

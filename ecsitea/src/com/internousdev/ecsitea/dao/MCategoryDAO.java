@@ -24,17 +24,21 @@ public class MCategoryDAO {
 			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()){
-				MCategoryDTO mCategoryDTO = new MCategoryDTO();
-				mCategoryDTO.setId(rs.getInt("id"));
-				mCategoryDTO.setCategoryId(rs.getInt("category_id"));
-				mCategoryDTO.setCategoryName(rs.getString("category_name"));
-				mCategoryDTO.setCategoryDescription(rs.getString("category_description"));
-				mCategoryDTO.setInsertDate(rs.getDate("insert_date"));
-				mCategoryDTO.setUpdateDate(rs.getDate("update_date"));
+				MCategoryDTO dto = new MCategoryDTO();
+				dto.setId(rs.getInt("id"));
+				dto.setCategoryId(rs.getInt("category_id"));
+				dto.setCategoryName(rs.getString("category_name"));
+				dto.setCategoryDescription(rs.getString("category_description"));
+				dto.setInsertDate(rs.getDate("insert_date"));
+				dto.setUpdateDate(rs.getDate("update_date"));
+				mCategoryDTOList.add(dto);
 			}
 			Iterator<MCategoryDTO> ite = mCategoryDTOList.iterator();
-			if(!(ite.hasNext()))
+			if(!(ite.hasNext())){
 				mCategoryDTOList = null;
+			}
+
+
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
@@ -44,7 +48,7 @@ public class MCategoryDAO {
 			e.printStackTrace();
 		}
 
-		return mCategoryDTOList ;
+		return mCategoryDTOList;
 	}
 
 
