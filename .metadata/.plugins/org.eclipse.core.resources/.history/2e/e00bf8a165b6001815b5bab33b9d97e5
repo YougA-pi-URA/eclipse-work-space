@@ -1,9 +1,0 @@
-package mycalculator;
-
-import javax.swing.JFrame;
-
-public class Display extends JFrame {
-
-	//画面表示のメソッド
-
-}

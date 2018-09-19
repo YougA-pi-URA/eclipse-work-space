@@ -1,0 +1,121 @@
+package mycalculator;
+
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.GraphicsEnvironment;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Play extends JFrame implements ActionListener {
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				Play play = new Play();
+				play.setVisible(true);
+				}
+			});
+	}
+
+	String info;
+	String calculation;
+	String modulo;
+	String result;
+
+	String regA;
+	String regB;
+	String memory;
+	short mode;
+
+	public Play(){
+
+		regA = "";
+		regB = "";
+		mode = 0;
+		memory = "";
+
+		setTitle("My Calculator");
+
+		ImageIcon icon = new ImageIcon("./img/icon_105830_128.png");
+		setIconImage(icon.getImage());
+
+		int appWidth = 300;
+		int appHeight = 400;
+		int scrWidth = GraphicsEnvironment.getLocalGraphicsEnvironment()
+				.getDefaultScreenDevice().getDisplayMode().getWidth();
+		int scrHeight = GraphicsEnvironment.getLocalGraphicsEnvironment()
+				.getDefaultScreenDevice().getDisplayMode().getHeight();
+		int x = (scrWidth - appWidth) / 2;
+		int y = (scrHeight - appHeight) / 2;
+		setBounds(x, y, appWidth, appHeight);
+
+		setResizable(false);
+
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+		JPanel panel = new JPanel();
+		panel.setLayout(new BorderLayout());
+		setContentPane(panel);
+
+		JPanel register = new JPanel();
+		register.setLayout(new GridLayout(2,2));
+		register.setBackground(Color.WHITE);
+
+		register.add(new JLabel(info));
+
+		JLabel display2 = new JLabel(calculation);
+		display2.setHorizontalAlignment(JLabel.RIGHT);
+		register.add(display2);
+
+		register.add(new JLabel(modulo));
+
+		JLabel display4 = new JLabel(result);
+		display4.setHorizontalAlignment(JLabel.RIGHT);
+		register.add(display4);
+		panel.add(register,BorderLayout.PAGE_START);
+
+		JPanel keyboard = new JPanel();
+		keyboard.setLayout(new GridLayout(6,4));
+		String keyLabel[] ={
+				"MC","MR","MS","CLR",
+				"√","%","±","÷余り",
+				"7","8","9","÷",
+				"4","5","6","×",
+				"1","2","3","－",
+				"0",".","＝","＋"
+		};
+		for(int i = 0; i < 24; i++){
+			JButton btn = new JButton(keyLabel[i]);
+			keyboard.add(btn);
+		}
+		panel.add(keyboard, BorderLayout.CENTER);
+
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Button button = (Button)e.getSource();
+		String label = button.getLabel();
+		if(label.equals("CLR")){
+			if(regB.isEmpty()){
+				regA = "";
+				mode = 0;
+			}else{
+				regB = "";
+			}
+		}
+	}
+
+}

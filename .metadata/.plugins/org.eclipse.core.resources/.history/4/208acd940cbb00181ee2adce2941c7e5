@@ -1,0 +1,81 @@
+package mycalculator;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.GraphicsEnvironment;
+import java.awt.GridLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Play extends JFrame {
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				Play play = new Play();
+				play.setVisible(true);
+				}
+			});
+	}
+
+	public Play(){
+
+		setTitle("My Calculator");
+
+		ImageIcon icon = new ImageIcon("./img/icon_105830_128.png");
+		setIconImage(icon.getImage());
+
+		int appWidth = 300;
+		int appHeight = 400;
+		int scrWidth = GraphicsEnvironment.getLocalGraphicsEnvironment()
+				.getDefaultScreenDevice().getDisplayMode().getWidth();
+		int scrHeight = GraphicsEnvironment.getLocalGraphicsEnvironment()
+				.getDefaultScreenDevice().getDisplayMode().getHeight();
+		int x = (scrWidth - appWidth) / 2;
+		int y = (scrHeight - appHeight) / 2;
+		setBounds(x, y, appWidth, appHeight);
+
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		setResizable(false);
+
+
+		JPanel panel = new JPanel();
+		panel.setLayout(new BorderLayout());
+		setContentPane(panel);
+
+		JPanel register = new JPanel();
+		register.setLayout(new GridLayout(2,2));
+		register.setBackground(Color.WHITE);
+		register.add(new JLabel("calc"));
+		register.add(new JLabel("あまり"));
+		register.add(new JLabel("result"));
+		register.add(new JLabel("M="));
+		panel.add(register,BorderLayout.PAGE_START);
+
+		JPanel keyboard = new JPanel();
+		keyboard.setLayout(new GridLayout(6,4));
+		String keyLabel[] ={
+				"MC","MR","MS","CLR",
+				"√","%","±","÷余り",
+				"7","8","9","÷",
+				"4","5","6","×",
+				"1","2","3","－",
+				"0",".","＝","＋"
+		};
+		for(int i = 0; i < 24; i++){
+			JButton btn = new JButton(keyLabel[i]);
+			keyboard.add(btn);
+		}
+		panel.add(keyboard, BorderLayout.CENTER);
+
+
+	}
+
+}

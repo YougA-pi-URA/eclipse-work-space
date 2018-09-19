@@ -12,7 +12,7 @@
 <body>
 
 	<jsp:include page="header.jsp" />
-	<div id="containts">
+	<div id="contents">
 		<h1>ホーム画面</h1>
 	</div>
 	<s:include value="footer.jsp" />

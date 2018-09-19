@@ -69,7 +69,7 @@ public class WindowTest extends Frame implements ActionListener, ItemListener, W
 		list.addItemListener(this);
 		c.gridx = 0;
 		c.gridy = 6;
-		c.gridwidth = 3;
+		c.gridwidth = 4;
 		gridbag.setConstraints(list, c);
 		add(list);
 
@@ -77,11 +77,13 @@ public class WindowTest extends Frame implements ActionListener, ItemListener, W
 		check.setState(false);
 		check.addItemListener(this);
 		c.gridx = 3;
+		c.gridy = 7;
 		c.gridwidth = 1;
 		gridbag.setConstraints(check, c);
 		add(check);
 
 		setVisible(true);
+		pack();
 
 	}
 

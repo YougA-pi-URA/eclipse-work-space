@@ -12,9 +12,9 @@
 <body>
 
 	<jsp:include page="header.jsp" />
-	<div id="containts">
+	<div id="contents">
 		<h1>商品一覧画面</h1>
-		<s:if test="productInfoDTOList">
+		<s:if test="productInfoDTOList==null">
 			<div class="info">
 				検索結果がありません。
 			</div>
@@ -34,7 +34,7 @@
 									class="item-image-box-200"
 									/>
 								</a><br>
-								<s:property value="productname" /><br>
+								<s:property value="productName" /><br>
 								<s:property value="productNameKana" /><br>
 								<s:property value="price" />円<br>
 							</li>
@@ -45,7 +45,7 @@
 			<div class="pager">
 				<s:iterator begin="1" end="#session.totalPageSize" status="pageNo">
 					<s:if test="#session.currentPageNo == #pageNo.count">
-						<s:property value="%{pageNo.count}" />
+						<s:property value="%{#pageNo.count}" />
 					</s:if>
 					<s:else>
 						<a href='
