@@ -1,0 +1,12 @@
+package mycalculator.key;
+
+public class DotKey {
+
+	public DotKey(String label, short functionId, short status) {
+		label = ".";
+		functionId = 1;
+		status = 10;
+	}
+
+
+}

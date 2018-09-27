@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class NumberKey {
+
+	public void oneKey(){
+		String	label = "1";
+		short	functionId = 1;
+	}
+
+}

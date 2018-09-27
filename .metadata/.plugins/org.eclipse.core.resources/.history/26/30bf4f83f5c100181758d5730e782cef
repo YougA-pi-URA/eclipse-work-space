@@ -1,0 +1,12 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyInfoTransferObject;
+
+public class ZeroKey {
+	public ZeroKey(KeyInfoTransferObject kito) {
+		kito.setLabel("0");
+		kito.setFunctionId(1);
+		kito.setStatus(0);
+	}
+
+}

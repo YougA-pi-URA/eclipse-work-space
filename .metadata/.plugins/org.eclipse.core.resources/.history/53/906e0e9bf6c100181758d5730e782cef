@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class MemorySaveKey {
+
+	public MemorySaveKey(String label, short functionId, short status) {
+		label = "MS";
+		functionId = 4;
+		status = 0;
+	}
+
+}

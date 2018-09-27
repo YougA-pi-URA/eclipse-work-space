@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyInfoTransferObject;
+
+public class WithRemainderKey {
+
+	public WithRemainderKey(KeyInfoTransferObject kito) {
+		kito.setLabel("÷余り");
+		kito.setFunctionId(2);
+		kito.setStatus(5);
+	}
+
+}

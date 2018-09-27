@@ -1,0 +1,5 @@
+package mycalculator.config;
+
+public class KeyAllocation {
+
+}

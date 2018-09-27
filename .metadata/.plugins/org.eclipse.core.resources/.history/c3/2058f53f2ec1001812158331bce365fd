@@ -1,0 +1,77 @@
+package mycalculator;
+
+import javax.swing.JLabel;
+
+public class Operator {
+
+
+	private double modulo;
+	private String regA;
+	private String regB;
+	private String modeTag;
+	private double a;
+	private double b;
+	private JLabel moduloInfo;
+	private boolean isZero;
+	private boolean dotUsed;
+
+	public void opelate(int status){
+		modulo = 0;
+		if(regA.isEmpty()){
+			a = 0;
+		}else{
+			a = Double.parseDouble(regA);
+		}
+		try{
+			b = Double.parseDouble(regB);
+		}catch(Exception e){
+			b = 0;
+		}
+
+		switch(status){
+		case 0:	a = b;
+				break;
+
+		case 1:	a += b;
+		modeTag = "＋";
+				break;
+
+		case 2:	a -= b;
+				break;
+
+		case 3:	a *= b;
+				break;
+
+		case 4:	try{
+					a /= b;
+				}catch(Exception e){	//ゼロ分はcatchしない。 ==> a == infinity
+					a = 128;
+				}
+				break;
+
+		case 5:	try{
+					modulo = a % b;
+					a = (int) (a / b);
+					moduloInfo.setText(" あまり " + String.valueOf(modulo));
+				}catch(Exception e){
+					a =128;
+				}
+				break;
+		}
+
+		if(status != 5 || a == 128){
+			moduloInfo.setText("");
+			modulo = 0;
+		}
+
+
+
+		regA = String.valueOf(a);
+		regB = "";
+
+		isZero = true;
+		dotUsed = false;
+	}
+
+
+}

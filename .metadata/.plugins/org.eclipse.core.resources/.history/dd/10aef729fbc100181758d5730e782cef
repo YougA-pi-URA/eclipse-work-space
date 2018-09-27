@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyAllocator;
+
+public class PercentKey {
+
+	public PercentKey(KeyAllocator kito) {
+		kito.setLabel("%");
+		kito.setFunctionId(3);
+		kito.setStatus(1);
+	}
+
+}

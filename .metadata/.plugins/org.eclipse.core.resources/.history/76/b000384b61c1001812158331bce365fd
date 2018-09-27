@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class MinusKey {
+
+	public MinusKey(String label, int functionId, int status) {
+		label = "－";
+		functionId = 2;
+		status = 2;
+	}
+
+}

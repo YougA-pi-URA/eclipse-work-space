@@ -1,0 +1,14 @@
+package mycalculator.config;
+
+public class KeyAllocation {
+
+	public String label;
+	public int functionId;
+	public int status;
+
+	public KeyAllocation(int keyId) {
+
+	}
+
+
+}

@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyInfoTransferObject;
+
+public class ClearKey {
+
+	public ClearKey(KeyInfoTransferObject kito) {
+		kito.setLabel("CLR");
+		kito.setFunctionId(0);
+		kito.setStatus(0);
+	}
+
+}

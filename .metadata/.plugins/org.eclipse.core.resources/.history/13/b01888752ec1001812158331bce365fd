@@ -1,0 +1,34 @@
+package mycalculator.function;
+
+import mycalculator.ViewRegenerate;
+
+public class Transform {
+
+	private boolean isZero;
+	private String regB;
+	private double b;
+
+	public void numberForm(int status){
+		if(isZero == true){
+			b = 0;
+		}else{
+			b = Double.parseDouble(regB);
+		}
+
+		switch(status){
+		case 0:	regB = String.valueOf(b * -1);
+				break;
+
+		case 1:	regB = String.valueOf(b * 0.01);
+				break;
+
+		case 2:	if(b > 0){
+					regB = String.valueOf(Math.sqrt(b));
+				}
+				break;
+		}
+		new ViewRegenerate();
+	}
+
+
+}

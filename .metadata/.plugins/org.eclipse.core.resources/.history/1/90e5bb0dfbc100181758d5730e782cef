@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyAllocator;
+
+public class SevenKey {
+
+	public SevenKey(KeyAllocator kito) {
+		kito.setLabel("7");
+		kito.setFunctionId(1);
+		kito.setStatus(7);
+	}
+
+}

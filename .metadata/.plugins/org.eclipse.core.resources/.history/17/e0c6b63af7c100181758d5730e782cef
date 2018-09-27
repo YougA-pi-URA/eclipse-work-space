@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyInfoTransferObject;
+
+public class EightKey {
+
+	public EightKey(KeyInfoTransferObject kito) {
+		kito.setLabel("8");
+		kito.setFunctionId(1);
+		kito.setStatus(8);
+	}
+
+}

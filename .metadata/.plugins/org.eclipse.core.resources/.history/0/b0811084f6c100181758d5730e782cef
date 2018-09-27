@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class MemoryClearKey {
+
+	public MemoryClearKey(String label, short functionId, short status) {
+		label = "MC";
+		functionId = 4;
+		status = 2;
+	}
+
+}

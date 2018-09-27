@@ -1,0 +1,162 @@
+package mycalculator.config;
+
+import mycalculator.key.ClearKey;
+import mycalculator.key.DivisionKey;
+import mycalculator.key.DotKey;
+import mycalculator.key.EightKey;
+import mycalculator.key.EqualKey;
+import mycalculator.key.FiveKey;
+import mycalculator.key.FourKey;
+import mycalculator.key.MemoryClearKey;
+import mycalculator.key.MemoryRecallKey;
+import mycalculator.key.MemorySaveKey;
+import mycalculator.key.MinusKey;
+import mycalculator.key.MultiplicationKey;
+import mycalculator.key.NineKey;
+import mycalculator.key.OneKey;
+import mycalculator.key.PercentKey;
+import mycalculator.key.PlusKey;
+import mycalculator.key.SevenKey;
+import mycalculator.key.SignInversionKey;
+import mycalculator.key.SixKey;
+import mycalculator.key.SquareRootKey;
+import mycalculator.key.ThreeKey;
+import mycalculator.key.TwoKey;
+import mycalculator.key.WithRemainderKey;
+import mycalculator.key.ZeroKey;
+
+public class KeyAllocation {
+
+	private String label;
+	private short functionId;
+	private short status;
+
+	public KeyAllocation(short keyId) {
+
+		switch(keyId){
+		case 0: new MemoryClearKey(label, functionId, status);
+				break;
+
+		case 1: new MemoryRecallKey(label, functionId, status);
+				break;
+
+		case 2: new MemorySaveKey(label, functionId, status);
+				break;
+
+		case 3: new ClearKey(label, functionId, status);
+				break;
+
+		case 4: new SquareRootKey(label, functionId, status);
+				break;
+
+		case 5: new PercentKey(label, functionId, status);
+				break;
+
+		case 6: new SignInversionKey(label, functionId, status);
+				break;
+
+		case 23: new WithRemainderKey(label, functionId, status);
+				break;
+
+		case 7: new SevenKey(label, functionId, status);
+				break;
+
+		case 8: new EightKey(label, functionId, status);
+				break;
+
+		case 9: new NineKey(label, functionId, status);
+				break;
+
+		case 10: new DivisionKey(label, functionId, status);
+				break;
+
+		case 11: new FourKey(label, functionId, status);
+				break;
+
+		case 12: new FiveKey(label, functionId, status);
+				break;
+
+		case 13: new SixKey(label, functionId, status);
+				break;
+
+		case 14: new MultiplicationKey(label, functionId, status);
+				break;
+
+		case 15: new OneKey(label, functionId, status);
+				break;
+
+		case 16: new TwoKey(label, functionId, status);
+				break;
+
+		case 17: new ThreeKey(label, functionId, status);
+				break;
+
+		case 18: new MinusKey(label, functionId, status);
+				break;
+
+		case 19: new ZeroKey(label, functionId, status);
+				break;
+
+		case 20: new DotKey(label, functionId, status);
+				break;
+
+		case 21: new EqualKey(label, functionId, status);
+				break;
+
+		case 22: new PlusKey(label, functionId, status);
+				break;
+
+		}
+
+	}
+
+	/**
+	 * labelを取得します。
+	 * @return label
+	 */
+	public String getLabel() {
+	    return label;
+	}
+
+	/**
+	 * labelを設定します。
+	 * @param label label
+	 */
+	public void setLabel(String label) {
+	    this.label = label;
+	}
+
+	/**
+	 * functionIdを取得します。
+	 * @return functionId
+	 */
+	public short getFunctionId() {
+	    return functionId;
+	}
+
+	/**
+	 * functionIdを設定します。
+	 * @param functionId functionId
+	 */
+	public void setFunctionId(short functionId) {
+	    this.functionId = functionId;
+	}
+
+	/**
+	 * statusを取得します。
+	 * @return status
+	 */
+	public short getStatus() {
+	    return status;
+	}
+
+	/**
+	 * statusを設定します。
+	 * @param status status
+	 */
+	public void setStatus(short status) {
+	    this.status = status;
+	}
+
+
+}

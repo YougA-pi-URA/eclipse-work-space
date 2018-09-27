@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class SevenKey {
+
+	public SevenKey(String label, int functionId, int status) {
+		label = "7";
+		functionId = 1;
+		status = 7;
+	}
+
+}

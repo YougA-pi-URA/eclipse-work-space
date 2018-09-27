@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyAllocator;
+
+public class MemoryRecallKey {
+
+	public MemoryRecallKey(KeyAllocator kito) {
+		kito.setLabel("MR");
+		kito.setFunctionId(4);
+		kito.setStatus(1);
+	}
+
+}

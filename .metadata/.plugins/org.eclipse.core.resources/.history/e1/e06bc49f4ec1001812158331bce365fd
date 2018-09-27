@@ -1,0 +1,20 @@
+package mycalculator.utility;
+
+public class ViewRegenerate {
+
+	public ViewRegenerate(Register register){
+		calculation.setText(regA + modeTag + regB + " ");
+		if(regB != ""){
+			result.setText(regB + " ");
+		}else if(regA != ""){
+			result.setText(regA + " ");
+		}else{
+			result.setText("0 ");
+		}
+		if(mode == 0){
+			regA = "";
+		}
+	}
+
+
+}

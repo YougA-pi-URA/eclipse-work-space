@@ -1,0 +1,188 @@
+package mycalculator.utility;
+
+import javax.swing.JLabel;
+
+public class Register {
+
+	private String memoryInfo;
+	private String calculationInfo;
+	private String moduloInfo;
+	private String numberInfo;
+	private String modeTag;
+	private String regA;
+	private String regB;
+	private short mode;
+	private double m;
+	private double modulo;
+	private boolean isZero;
+	private boolean dotUsed;
+	/**
+	 * memoryInfoを取得します。
+	 * @return memoryInfo
+	 */
+	public String getMemoryInfo() {
+	    return memoryInfo;
+	}
+	/**
+	 * memoryInfoを設定します。
+	 * @param memoryInfo memoryInfo
+	 */
+	public void setMemoryInfo(String memoryInfo) {
+	    this.memoryInfo = memoryInfo;
+	}
+	/**
+	 * calculationInfoを取得します。
+	 * @return calculationInfo
+	 */
+	public String getCalculationInfo() {
+	    return calculationInfo;
+	}
+	/**
+	 * calculationInfoを設定します。
+	 * @param calculationInfo calculationInfo
+	 */
+	public void setCalculationInfo(String calculationInfo) {
+	    this.calculationInfo = calculationInfo;
+	}
+	/**
+	 * moduloInfoを取得します。
+	 * @return moduloInfo
+	 */
+	public String getModuloInfo() {
+	    return moduloInfo;
+	}
+	/**
+	 * moduloInfoを設定します。
+	 * @param moduloInfo moduloInfo
+	 */
+	public void setModuloInfo(String moduloInfo) {
+	    this.moduloInfo = moduloInfo;
+	}
+	/**
+	 * numberInfoを取得します。
+	 * @return numberInfo
+	 */
+	public String getNumberInfo() {
+	    return numberInfo;
+	}
+	/**
+	 * numberInfoを設定します。
+	 * @param numberInfo numberInfo
+	 */
+	public void setNumberInfo(String numberInfo) {
+	    this.numberInfo = numberInfo;
+	}
+	/**
+	 * modeTagを取得します。
+	 * @return modeTag
+	 */
+	public String getModeTag() {
+	    return modeTag;
+	}
+	/**
+	 * modeTagを設定します。
+	 * @param modeTag modeTag
+	 */
+	public void setModeTag(String modeTag) {
+	    this.modeTag = modeTag;
+	}
+	/**
+	 * regAを取得します。
+	 * @return regA
+	 */
+	public String getRegA() {
+	    return regA;
+	}
+	/**
+	 * regAを設定します。
+	 * @param regA regA
+	 */
+	public void setRegA(String regA) {
+	    this.regA = regA;
+	}
+	/**
+	 * regBを取得します。
+	 * @return regB
+	 */
+	public String getRegB() {
+	    return regB;
+	}
+	/**
+	 * regBを設定します。
+	 * @param regB regB
+	 */
+	public void setRegB(String regB) {
+	    this.regB = regB;
+	}
+	/**
+	 * modeを取得します。
+	 * @return mode
+	 */
+	public short getMode() {
+	    return mode;
+	}
+	/**
+	 * modeを設定します。
+	 * @param mode mode
+	 */
+	public void setMode(short mode) {
+	    this.mode = mode;
+	}
+	/**
+	 * mを取得します。
+	 * @return m
+	 */
+	public double getM() {
+	    return m;
+	}
+	/**
+	 * mを設定します。
+	 * @param m m
+	 */
+	public void setM(double m) {
+	    this.m = m;
+	}
+	/**
+	 * moduloを取得します。
+	 * @return modulo
+	 */
+	public double getModulo() {
+	    return modulo;
+	}
+	/**
+	 * moduloを設定します。
+	 * @param modulo modulo
+	 */
+	public void setModulo(double modulo) {
+	    this.modulo = modulo;
+	}
+	/**
+	 * isZeroを取得します。
+	 * @return isZero
+	 */
+	public boolean isZero() {
+	    return isZero;
+	}
+	/**
+	 * isZeroを設定します。
+	 * @param isZero isZero
+	 */
+	public void setZero(boolean isZero) {
+	    this.isZero = isZero;
+	}
+	/**
+	 * dotUsedを取得します。
+	 * @return dotUsed
+	 */
+	public boolean isDotUsed() {
+	    return dotUsed;
+	}
+	/**
+	 * dotUsedを設定します。
+	 * @param dotUsed dotUsed
+	 */
+	public void setDotUsed(boolean dotUsed) {
+	    this.dotUsed = dotUsed;
+	}
+
+}

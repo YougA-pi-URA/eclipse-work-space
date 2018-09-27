@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyAllocator;
+
+public class ThreeKey {
+
+	public ThreeKey(KeyAllocator kito) {
+		kito.setLabel("3");
+		kito.setFunctionId(1);
+		kito.setStatus(3);
+	}
+
+}

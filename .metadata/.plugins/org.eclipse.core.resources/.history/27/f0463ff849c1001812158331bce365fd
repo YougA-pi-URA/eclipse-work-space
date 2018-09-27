@@ -1,0 +1,9 @@
+package mycalculator.function;
+
+public class MemoryAction {
+
+	public MemoryAction(int status) {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}

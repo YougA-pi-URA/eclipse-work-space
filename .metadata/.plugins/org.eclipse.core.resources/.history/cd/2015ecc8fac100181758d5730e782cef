@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyAllocator;
+
+public class TwoKey {
+
+	public TwoKey(KeyAllocator kito) {
+		kito.setLabel("2");
+		kito.setFunctionId(1);
+		kito.setStatus(2);
+	}
+
+}

@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyInfoTransferObject;
+
+public class OneKey {
+
+	public OneKey(KeyInfoTransferObject kito) {
+		kito.setLabel("1");
+		kito.setFunctionId(1);
+		kito.setStatus(1);
+	}
+
+}

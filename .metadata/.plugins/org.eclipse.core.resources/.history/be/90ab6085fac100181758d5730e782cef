@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyAllocator;
+
+public class FourKey {
+
+	public FourKey(KeyAllocator kito) {
+		kito.setLabel("4");
+		kito.setFunctionId(1);
+		kito.setStatus(4);
+	}
+
+}

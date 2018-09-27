@@ -1,0 +1,25 @@
+package mycalculator.function;
+
+import mycalculator.utility.Register;
+
+public class ClearAction {
+
+	public Register register = new Register();
+
+	public ClearAction(Register register){
+
+		if(register.getRegB().isEmpty()){
+			double memoryBackup = register.getMemory();
+			register = new Register();
+			register.setMemory(memoryBackup);
+		}else{
+			register.setRegB("");
+			register.setZero(true);
+			register.setDotUsed(false);
+		}
+
+		this.register = register;
+
+	}
+
+}

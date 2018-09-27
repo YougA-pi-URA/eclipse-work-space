@@ -1,0 +1,47 @@
+package iteratorpattern;
+
+public class Student {
+
+	private String name;
+	private int sex;
+	
+	public Student(String name, int sex){
+		this.name = name;
+		this.sex = sex;
+	}
+
+	/**
+	 * nameを取得します。
+	 * @return name
+	 */
+	public String getName() {
+	    return name;
+	}
+
+	/**
+	 * nameを設定します。
+	 * @param name name
+	 */
+	public void setName(String name) {
+	    this.name = name;
+	}
+
+	/**
+	 * sexを取得します。
+	 * @return sex
+	 */
+	public int getSex() {
+	    return sex;
+	}
+
+	/**
+	 * sexを設定します。
+	 * @param sex sex
+	 */
+	public void setSex(int sex) {
+	    this.sex = sex;
+	}
+	
+	
+	
+}

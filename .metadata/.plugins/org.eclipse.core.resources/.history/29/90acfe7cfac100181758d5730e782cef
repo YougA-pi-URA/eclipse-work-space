@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyAllocator;
+
+public class FiveKey {
+
+	public FiveKey(KeyAllocator kito) {
+		kito.setLabel("5");
+		kito.setFunctionId(1);
+		kito.setStatus(5);
+	}
+
+}

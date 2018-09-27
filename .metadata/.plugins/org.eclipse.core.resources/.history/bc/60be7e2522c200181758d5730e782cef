@@ -1,0 +1,69 @@
+package mycalculator.function;
+
+import mycalculator.utility.Register;
+
+public class OperatorAction {
+
+	public Register register;
+
+	public OperatorAction(Register register, int status){
+
+		double a, b;
+		final int ERROR = 404;
+
+		register.remainder = 0;
+		if(register.regA.isEmpty()){
+			a = 0;
+		}else{
+			a = Double.parseDouble(register.regA);
+		}
+		if(register.isZero == true){
+			b = 0;
+		}else{
+			b = Double.parseDouble(register.regB);
+		}
+
+		switch(status){
+		case 0:	a = b;
+				break;
+
+		case 1:	a += b;
+				break;
+
+		case 2:	a -= b;
+				break;
+
+		case 3:	a *= b;
+				break;
+
+		case 4:	try{
+					a /= b;
+				}catch(Exception e){	//ゼロ分はcatchしない。 ==> a == infinity
+					a = ERROR;
+				}
+				break;
+
+		case 5:	try{
+					register.remainder = a % b;
+					a = (int) (a / b);
+					register.setRemainderInfo(" あまり " + String.valueOf(register.getRemainder()));
+				}catch(Exception e){
+					a =ERROR;
+				}
+				break;
+		}
+
+		if(status != 5 || a == ERROR){
+			register.setRemainderInfo("");
+			register.setRemainder(0);
+		}
+
+		register.setRegA(String.valueOf(a));
+		register.setRegB("");
+		register.setZero(true);
+		register.setDotUsed(false);
+
+		this.register = register;
+	}
+
+}

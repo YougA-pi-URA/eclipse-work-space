@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyInfoTransferObject;
+
+public class MinusKey {
+
+	public MinusKey(KeyInfoTransferObject kito) {
+		kito.setLabel("－");
+		kito.setFunctionId(2);
+		kito.setStatus(2);
+	}
+
+}

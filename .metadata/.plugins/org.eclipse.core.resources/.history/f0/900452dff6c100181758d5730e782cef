@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class WithRemainderKey {
+
+	public WithRemainderKey(String label, short functionId, short status) {
+		label = "÷余り";
+		functionId = 2;
+		status = 5;
+	}
+
+}

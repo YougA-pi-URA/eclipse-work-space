@@ -1,0 +1,21 @@
+package mycalculator.config;
+
+import mycalculator.function.ClearAction;
+import mycalculator.function.MemoryAction;
+import mycalculator.function.NumberAction;
+import mycalculator.function.OperatorAction;
+import mycalculator.function.TransformAction;
+
+public class Function {
+
+	public void allocate(int id, int status){
+		switch(id){
+		case 0:new ClearAction();			break;
+		case 1:new NumberAction(status);	break;
+		case 2:new OperatorAction(status);	break;
+		case 3:new TransformAction(status);	break;
+		case 4:new MemoryAction(status);	break;
+		}
+	}
+
+}

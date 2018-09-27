@@ -1,0 +1,34 @@
+package mycalculator.function;
+
+import mycalculator.utility.Register;
+import mycalculator.utility.ViewRegenerate;
+
+public class TransformAction {
+
+	public TransformAction(Register register, int status){
+
+		double b;
+
+		if(register.isZero() == true){
+			b = 0;
+		}else{
+			b = Double.parseDouble(register.getRegB());
+		}
+
+		switch(status){
+		case 0:	register.setRegB(String.valueOf(b * -1));
+				break;
+
+		case 1:	register.setRegB(String.valueOf(b * 0.01));
+				break;
+
+		case 2:	if(b > 0){
+					register.setRegB(String.valueOf(Math.sqrt(b)));
+				}
+				break;
+		}
+		new ViewRegenerate();
+	}
+
+
+}

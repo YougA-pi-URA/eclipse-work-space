@@ -1,0 +1,28 @@
+package mycalculator.utility;
+
+public class ViewRegenerate {
+
+	public ViewRegenerate(Register register){
+
+		String symbol = register.getOperatorSymbol();
+		String regA = register.getRegA();
+		String regB = register.getRegB();
+		short mode = register.getOperationMode();
+		Double memory = register.getMemory();
+
+		register.setCalculationInfo(regA + symbol + regB + " ");
+
+		if(regB != ""){
+			register.setNumberInfo(regB + " ");
+		}else if(regA != ""){
+			register.setNumberInfo(regA + " ");
+		}else{
+			register.setNumberInfo("0 ");
+		}
+		if(mode == 0){
+			regA = "";
+		}
+	}
+
+
+}

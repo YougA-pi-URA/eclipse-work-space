@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyInfoTransferObject;
+
+public class DotKey {
+
+	public DotKey(KeyInfoTransferObject kito) {
+		kito.setLabel(".");
+		kito.setFunctionId(1);
+		kito.setStatus(10);
+	}
+
+}

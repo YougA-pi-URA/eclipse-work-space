@@ -1,0 +1,29 @@
+package mycalculator;
+
+import javax.swing.JLabel;
+
+public class ViewRegenerate {
+
+	private JLabel calculation;
+	private String regA;
+	private String regB;
+	private String modeTag;
+	private JLabel result;
+	private int mode;
+
+	public ViewRegenerate(){
+		calculation.setText(regA + modeTag + regB + " ");
+		if(regB != ""){
+			result.setText(regB + " ");
+		}else if(regA != ""){
+			result.setText(regA + " ");
+		}else{
+			result.setText("0 ");
+		}
+		if(mode == 0){
+			regA = "";
+		}
+	}
+
+
+}

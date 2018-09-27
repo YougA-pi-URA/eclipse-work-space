@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyAllocator;
+
+public class PlusKey {
+
+	public PlusKey(KeyAllocator kito) {
+		kito.setLabel("＋");
+		kito.setFunctionId(2);
+		kito.setStatus(1);
+	}
+
+}

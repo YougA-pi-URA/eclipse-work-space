@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class MultiplicationKey {
+
+	public MultiplicationKey(String label, int functionId, int status) {
+		label = "×";
+		functionId = 2;
+		status = 3;
+	}
+
+}

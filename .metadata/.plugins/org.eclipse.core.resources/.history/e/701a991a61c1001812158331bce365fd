@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class EightKey {
+
+	public EightKey(String label, int functionId, int status) {
+		label = "8";
+		functionId = 1;
+		status = 8;
+	}
+
+}

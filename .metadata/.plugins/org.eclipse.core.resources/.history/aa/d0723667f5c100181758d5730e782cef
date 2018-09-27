@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class ZeroKey {
+
+	public ZeroKey(String label, short functionId, short status) {
+		label = "0";
+		functionId = 1;
+		status = 0;
+	}
+
+}

@@ -1,0 +1,13 @@
+package mycalculator.key;
+
+import mycalculator.utility.KeyInfoTransferObject;
+
+public class SquareRootKey {
+
+	public SquareRootKey(KeyInfoTransferObject kito) {
+		kito.setLabel("√");
+		kito.setFunctionId(3);
+		kito.setStatus(2);
+	}
+
+}

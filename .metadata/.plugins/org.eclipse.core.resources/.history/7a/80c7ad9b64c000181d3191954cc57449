@@ -1,0 +1,11 @@
+package iteratorpattern;
+
+public class MyStudentList extends NewStudentList implements Aggregate {
+
+	@Override
+	public Iterator iterator() {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
+	}
+
+}

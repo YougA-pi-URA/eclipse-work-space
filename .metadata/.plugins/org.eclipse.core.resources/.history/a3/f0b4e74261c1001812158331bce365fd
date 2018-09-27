@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class MemoryRecallKey {
+
+	public MemoryRecallKey(String label, int functionId, int status) {
+		label = "MR";
+		functionId = 4;
+		status = 1;
+	}
+
+}

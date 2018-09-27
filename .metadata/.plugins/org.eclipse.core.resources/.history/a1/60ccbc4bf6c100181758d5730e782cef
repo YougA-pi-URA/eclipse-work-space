@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class DivisionKey {
+
+	public DivisionKey(String label, short functionId, short status) {
+		label = "÷";
+		functionId = 2;
+		status = 4;
+	}
+
+}

@@ -1,0 +1,9 @@
+package mycalculator.utility;
+
+public class FunctionAllocator {
+
+	public Register register;
+	public int functionId;
+	public int status;
+
+}

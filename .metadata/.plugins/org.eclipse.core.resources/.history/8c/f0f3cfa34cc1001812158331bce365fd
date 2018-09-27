@@ -1,0 +1,10 @@
+package mycalculator.function;
+
+import mycalculator.utility.Register;
+
+public class MemoryAction {
+
+	public MemoryAction(Register register, int status) {
+	}
+
+}

@@ -1,0 +1,29 @@
+package mycalculator.function;
+
+import mycalculator.utility.Register;
+
+public class MemoryAction {
+
+	public Register memoryAction(Register register, int status) {
+
+		switch(status){
+		case 0:	register.setMemory(Double.parseDouble(register.getNumberInfo()));
+				break;
+
+		case 1:	register.setRegB(String.valueOf(register.getMemory()));
+				break;
+
+		case 2:	register.setMemory(0);
+		}
+
+		if(register.getMemory() == 0){
+			register.setMemoryInfo("");
+		}else{
+			register.setMemoryInfo("M = " + String.valueOf(register.getMemory()));
+		}
+
+		return register;
+
+	}
+
+}

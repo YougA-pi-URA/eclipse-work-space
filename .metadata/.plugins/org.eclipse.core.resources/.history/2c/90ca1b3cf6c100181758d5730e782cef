@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class NineKey {
+
+	public NineKey(String label, short functionId, short status) {
+		label = "9";
+		functionId = 1;
+		status = 9;
+	}
+
+}

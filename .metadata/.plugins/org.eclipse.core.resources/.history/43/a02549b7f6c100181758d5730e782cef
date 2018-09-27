@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class SquareRootKey {
+
+	public SquareRootKey(String label, short functionId, short status) {
+		label = "√";
+		functionId = 3;
+		status = 2;
+	}
+
+}

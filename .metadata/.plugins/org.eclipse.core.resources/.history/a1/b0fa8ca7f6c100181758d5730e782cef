@@ -1,0 +1,11 @@
+package mycalculator.key;
+
+public class ClearKey {
+
+	public ClearKey(String label, short functionId, short status) {
+		label = "CLR";
+		functionId = 0;
+		status = 0;
+	}
+
+}

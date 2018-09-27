@@ -1,0 +1,11 @@
+package mycalculator.config;
+
+import javax.swing.Icon;
+
+public class KeyAllocation {
+
+	public String label;
+	public int id;
+	public int status;
+
+}

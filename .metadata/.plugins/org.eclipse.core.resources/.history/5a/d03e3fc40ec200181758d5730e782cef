@@ -1,0 +1,40 @@
+package mycalculator.config;
+
+import mycalculator.function.ClearAction;
+import mycalculator.function.MemoryAction;
+import mycalculator.function.NumberAction;
+import mycalculator.function.OperatorAction;
+import mycalculator.function.TransformAction;
+import mycalculator.utility.FunctionAllocator;
+import mycalculator.utility.Register;
+
+public class FunctionAllocation {
+
+	FunctionAllocator allocator = new FunctionAllocator();
+
+	public Register allocate(Register register, int functionId, int status){
+
+		allocator.register = register;
+		allocator.functionId = functionId;
+		allocator.status = status;
+
+		switch(allocator.functionId){
+		case 0:	new ClearAction(allocator.register);
+				break;
+
+		case 1:	new NumberAction(allocator.register,allocator.status);
+				break;
+
+		case 2:	new OperatorAction(allocator.register,allocator.status);
+				break;
+
+		case 3:	new TransformAction(allocator.register,allocator.status);
+				break;
+
+		case 4:	new MemoryAction(allocator.register,allocator.status);
+				break;
+		}
+		return allocator.register;
+	}
+
+}
